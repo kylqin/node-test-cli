@@ -1,0 +1,61 @@
+{
+  "name": "node-test-cli",
+  "version": "1.0.0",
+  "description": "Create node js/ts unit tests.",
+  "repository": "https://github.com/kylqin/node-test-cli.git",
+  "author": "kylqin <kylqin@outlook.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "main": ".lib/index.js",
+  "bin": {
+    "ntest": "./bin/run"
+  },
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "ntest",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "scripts": {
+    "clean": "rimraf tmp",
+    "build": "tsc -b",
+    "test": "jest",
+    "cli": "yarn build && ./bin/run",
+    "postpack": "rm -f oclif.manifest.json",
+    "prepost": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "ora": "^5.1.0",
+    "tslib": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.10",
+    "babel-jest": "^26.5.2",
+    "chai": "^4.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.2.0",
+    "jest": "^26.5.3",
+    "mock-fs": "^4.13.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}
