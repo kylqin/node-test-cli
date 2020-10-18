@@ -3,17 +3,12 @@ import * as fs from 'fs'
 // import mockFs from 'mock-fs'
 import { join } from 'path'
 import * as rimraf from 'rimraf'
-import * as utils from '../src/utils'
+// import * as utils from '../src/utils'
+import { doseFileExist } from './utils'
 
 // jest.mock('../src/utils')
 
 const { mkdir } = fs.promises
-
-const doseFileExist = (path: string) =>
-  fs.promises
-    .access(path)
-    .then(() => true)
-    .catch(() => false)
 
 describe('init', () => {
   const workspace = join(process.cwd(), 'workspace')
