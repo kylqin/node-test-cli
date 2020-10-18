@@ -23,7 +23,6 @@ export default class New extends Command {
     const templateDir = getTemplateDir()
     const type = collectionType()
     const cwd = getCwd()
-    console.log('CWD ->', cwd)
     const spinner = ora('Creating test unit').start()
 
     const { args } = this.parse(New)

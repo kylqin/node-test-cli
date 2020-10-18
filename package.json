@@ -1,6 +1,6 @@
 {
   "name": "node-test-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create node js/ts unit tests.",
   "repository": "https://github.com/kylqin/node-test-cli.git",
   "author": "kylqin <kylqin@outlook.com>",
@@ -23,7 +23,8 @@
     "/bin",
     "/lib",
     "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/oclif.manifest.json",
+    "/templates"
   ],
   "scripts": {
     "clean": "rimraf tmp",
