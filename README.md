@@ -2,6 +2,14 @@
 
 Create node js/ts unit tests.
 
+[![NPM version][npm-image]][npm-url]
+<!-- [![npm download][download-image]][download-url] -->
+
+[npm-image]: http://img.shields.io/npm/v/node-test-cli.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/node-test-cli
+<!-- [download-image]: https://img.shields.io/npm/dm/node-test-cli.svg?style=flat-square
+[download-url]: https://npmjs.org/package/node-test-cli -->
+
 ## Usage
 
 ```sh
