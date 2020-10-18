@@ -18,7 +18,7 @@ export default class Init extends Command {
   static flags = {
     type: flags.enum({
       char: 't',
-      description: 'Which language ot use (javascript or typescript)',
+      description: 'Which language to use (javascript or typescript)',
       options: ['js', 'ts'],
       default: 'js'
     })
